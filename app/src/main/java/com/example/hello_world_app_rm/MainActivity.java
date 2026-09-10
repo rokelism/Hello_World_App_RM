@@ -22,5 +22,11 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        Button button1 = findViewById(R.id.button1);
+        TextView textView1 = findViewById(R.id.textView1);
+
+        button1.setOnClickListener(v -> {
+            textView1.setText("Button Clicked!");
+        });
     }
 }
