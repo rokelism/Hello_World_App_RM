@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         });
         Button button1 = findViewById(R.id.button1);
         Button button2 = findViewById(R.id.button2);
+        Button button3 = findViewById(R.id.button3);
         TextView textView1 = findViewById(R.id.textView1);
 
 
@@ -40,8 +41,13 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(v -> {
             textView1.setText("Hello World!");
         });
+        button3.setText("Change the text's background color");
+        button3.setOnClickListener(v -> {
+            textView1.setBackgroundColor(Color.parseColor("#FFFF00"));
+        });
         textView1.setGravity(Gravity.CENTER);
         button1.setGravity(Gravity.CENTER);
         button2.setGravity(Gravity.CENTER);
+        button3.setGravity(Gravity.CENTER);
     }
 }
