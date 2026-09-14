@@ -1,10 +1,14 @@
 package com.example.hello_world_app_rm;
 
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -12,6 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,10 +28,20 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         Button button1 = findViewById(R.id.button1);
+        Button button2 = findViewById(R.id.button2);
         TextView textView1 = findViewById(R.id.textView1);
 
-        button1.setOnClickListener(v -> {
-            textView1.setText("Button Clicked!");
+
+        button2.setText("Change color");
+        button2.setOnClickListener(View -> {
+            textView1.setTextColor(Color.parseColor("#FF0000"));
         });
+        button1.setText("Change text");
+        button1.setOnClickListener(v -> {
+            textView1.setText("Text Changed!");
+        });
+        textView1.setGravity(Gravity.CENTER);
+        button1.setGravity(Gravity.CENTER);
+        button2.setGravity(Gravity.CENTER);
     }
 }
