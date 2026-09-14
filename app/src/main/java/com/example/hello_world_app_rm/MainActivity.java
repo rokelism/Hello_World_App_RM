@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         });
         button3.setText("Change the text's background color");
         button3.setOnClickListener(v -> {
+            //Comment for revert
             textView1.setBackgroundColor(Color.parseColor("#FFFF00"));
         });
         textView1.setGravity(Gravity.CENTER);
