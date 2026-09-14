@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         });
         button1.setText("Change text");
         button1.setOnClickListener(v -> {
-            textView1.setText("Text Changed!");
+            textView1.setText("Hello World!");
         });
         textView1.setGravity(Gravity.CENTER);
         button1.setGravity(Gravity.CENTER);
